@@ -19,10 +19,13 @@ void computer_move();
 void print_game();
 char tokenstr(int token);
 void print_result();
-
-int winner;		// who won?
-int size;
-int **board;
+'
+//Added in structure so that its type is global but the values are local
+typedef struct TicTacToe{
+  int size; //size of game board
+  int **board; //game board 2d array [size][size]
+  int winner; 
+} TicTacToe;
 
 int main(void)
 {
