@@ -61,3 +61,23 @@ void init_game(int *board[])
 {
 
 }
+
+/*
+TicTacToe *init_game(int size)
+{
+  int i, j;
+  i=j=size;
+
+  TicTacToe *temp;
+  
+  (*temp).board=(int**)malloc(sizeof(int *)*size); //create initial array space
+
+  (*temp).board[0];
+  for(i=0; i<size; i++){ //create space for the 2nd array
+    int *ptr_to_space = (int *)malloc(sizeof(int)*size);
+    (*temp).board[i]=ptr_to_space;
+  }
+  (*temp).size=size; //for use later in program, print for example
+  return temp;
+
+}*/
