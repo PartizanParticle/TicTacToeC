@@ -1,5 +1,5 @@
 /*
- * TICTACTIE -- Human vs. Computer
+ * TICTACTOE -- Human vs. Computer
  *
  * Author: Marcel van Workum
  * Date: May 2015
@@ -10,7 +10,6 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include <tclDecls.h>
 #include "tictactoe.h"
 
 int check();
