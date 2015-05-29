@@ -20,8 +20,6 @@ void print_game();
 char tokenstr(int token);
 void print_result();
 
-int size;
-
 typedef struct TicTacToe{
   int size; //size of game board
   int **board; //game board 2d array [size][size]
@@ -30,6 +28,8 @@ typedef struct TicTacToe{
 
 int main(void)
 {
+    int size = 0;
+
 	printf("Welcome to TicTacToe.\n");
 	printf("You will be playing against the computer.\n");
 	printf("Goodluck!\n\n");
@@ -41,13 +41,17 @@ int main(void)
     } else {
         printf("The game board is %d by %d\n", size, size);
 
+        size = size * 2;
         TicTacToe *temp;
+        temp->size = size;
+        temp->winner = 0;
+        temp->board = (int**)malloc(sizeof(int *)*size); //create initial array space
+        temp->board[0];
 
-        (*temp).board=(int**)malloc(sizeof(int *)*size); //create initial array space
-        (*temp).board[0];
         for(int i=0; i<size; i++){ //create space for the 2nd array
             int *ptr_to_space = (int *)malloc(sizeof(int)*size);
-            (*temp).board[i]=ptr_to_space;
+            temp->board[i] = ptr_to_space;
+            printf("%d\n", temp->board[i]);
         }
     }
 }
@@ -55,11 +59,5 @@ int main(void)
 /* initialize the matrix. */
 void init_game(int *board[])
 {
-    board = board[size][size];
-    int i, j;
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-            board[i][j] = NONE;
-        }
-    }
+
 }
