@@ -20,9 +20,12 @@ void print_game();
 char tokenstr(int token);
 void print_result();
 
-int winner;		// who won?
-int size;
-int **board;
+
+typedef struct TicTacToe{
+  int size; //size of game board
+  int **board; //game board 2d array [size][size]
+  int winner; //who won, draw=-2, human win=-1, none=0, computer win =1;
+} TicTacToe;
 
 int main(void)
 {
