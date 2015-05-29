@@ -10,6 +10,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <tclDecls.h>
 #include "tictactoe.h"
 
 int check();
@@ -20,6 +21,7 @@ void print_game();
 char tokenstr(int token);
 void print_result();
 
+int size;
 
 typedef struct TicTacToe{
   int size; //size of game board
@@ -50,14 +52,6 @@ int main(void)
         }
     }
 }
-
-typedef struct TicTacToe
-{
-    int size; // this is the size of the game board
-    int **board; // this is the game board
-    int winner; // who won
-} TicTacToe;
-
 
 /* initialize the matrix. */
 void init_game(int *board[])
